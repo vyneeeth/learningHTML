@@ -18,3 +18,157 @@ th:hover{background-color:rgba(226, 225, 225, 0.8);}
 #flames{
     text-shadow: 0px -3px 2px rgb(226, 200, 0), 0px -2px 2px rgba(227, 23, 23, 0.845);
 }
+
+.newone{
+    width: 99%;
+    height: 100px;
+    text-align: center;
+    background: linear-gradient(rgb(42, 250, 0),rgba(236, 196, 20, 0.845),rgba(226, 225, 225, 0.8)    );
+}
+
+#mc{
+    margin-top: 25px;
+    text-align: center;
+    border-radius: 30px;
+    border: none;
+}
+
+#but{
+    background: linear-gradient(rgba(226, 225, 225, 0.138),rgb(42, 250, 0)    );
+    border: none;
+    margin-top: 5px;
+    border-radius:30px;
+    font-size: 10px;
+}
+
+#but:hover{
+    color: red;
+    background:rgba(214, 52, 52, 0.8);
+}
+
+#translat{
+    width: 110px;
+    height: 30px;
+    margin-bottom: 60px;
+    border: 1px solid;
+    
+    animation: translateanimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes translateanimation{
+    50%{transform: translate(50px, 50px);}
+}
+
+#rotat{
+    float: right;
+    width: 30%;
+    margin-right: 70px;
+    animation: rotateanimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateanimation{
+    50%{color:blue}
+    100%{transform: rotateY(360deg);}
+
+}
+
+#scal{
+    float: right;
+    margin-right: 50px;
+    width: 100px;
+    height: 30px;
+    animation: scaleanimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scaleanimation{
+    50%{transform: scale(2, 2);}
+}
+
+#ske{
+    float: right;
+    width: 30%;
+    animation: skewanimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes skewanimation{
+    50%{transform: skewX(-200deg);}
+}
+
+#matri{
+    height: 50px;
+    width: 50px;
+    margin-left: 50px;
+    animation: matrixanimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes matrixanimation{
+    50%{transform: matrix(0.5, 1, 0, 0.5, 5, 5);}
+}
+
+#opacit{
+    float: right;
+    animation: opacityanimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes opacityanimation{
+    50%{opacity:0}
+}
+
+#combo{
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    animation: combinationofall;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes combinationofall{
+    10%{transform: skewY(110deg)}
+    20%{opacity:0.5}
+    30%{color:tomato}
+    40%{opacity:1}
+    50%{transform: rotateX(135deg)}
+    60%{transform: scale(2, 2)}
+    70%{background-color:rgba(236, 196, 20, 0.845)}
+    80%{transform: translate(50px, 50px)}
+}
+
+#lgbtq{
+    font-size: 25px;
+    float: right;
+    width: 8%;
+    margin: 150px;
+    background: linear-gradient(to right, rgba(238, 130, 238, 0.5), rgba(75, 0, 130, 0.5), rgba(0, 0, 255, 0.5), rgb(0, 128, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(255, 166, 0, 0.5), rgba(255, 0, 0, 0.5));
+    animation: rainbowanimation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbowanimation{
+    0%{color: violet;}
+    17%{color: indigo;
+        transform: translate(25px, -25px)}
+    34%{color: blue;
+        transform: translate(50px, -50px)}
+    51%{color: green;
+        transform: translate(75px, -75px)}
+    68%{color: yellow;
+        transform: translate(100px, -50px)}
+    85%{color: orange;
+        transform: translate(125px, -25px)}
+    100%{color: red;
+        transform: translate(150px, 0px)}
+}
