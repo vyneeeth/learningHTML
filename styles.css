@@ -172,3 +172,36 @@ th:hover{background-color:rgba(226, 225, 225, 0.8);}
     100%{color: red;
         transform: translate(150px, 0px)}
 }
+
+#flexx div{
+    color: white;
+    background-color:grey;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    margin: 5px;
+    line-height: 100px;
+    font-size: 30px;
+}
+
+#flexx{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: lightgrey;
+    justify-content: space-around;
+}
+
+#convert{
+    display: flex;
+    width: 100px;
+    align-items: center;
+    margin: 10px;
+}
+
+#convert i{
+    margin: 10px;
+}
+
+.fa-inr{
+    padding-top: 5px;
+}
