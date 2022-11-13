@@ -6,7 +6,6 @@ console.log('i hate javascript (for now)');
 age = window.prompt("Etner your age:");
 console.log("your age is: ", age);*/
 
-
 //----------------start of age calculator--------------------
 
 let y1, y2, m1, m2, d1, d2, yr, mon, dat;
@@ -18,7 +17,6 @@ d1 = Number(date.getDate());
 console.log(y1, m1, d1);
 
 document.getElementById("first").onclick = function(){
-
     date2 = document.getElementById("ele").value;
     y2 = Number(date2.slice(0, 4));
     m2 = Number(date2.slice(5, 7));
@@ -29,33 +27,30 @@ document.getElementById("first").onclick = function(){
     mon = Math.abs(m1 - m2);
     dat = Math.abs(d1 - d2);
 
-    if(m1 >= m2){
-        if(d2 > d1){
-            mon -= 1;
-            if(m2 == 1 || m2 == 3 || m2 == 5 || m2 == 7 || m2 == 8 || m2 == 10 || m2 == 12){
-                dat = 31 - dat;
-            }
-            else if(m2 == 4 || m2 == 6 || m2 == 9 || m2 == 11){
-                dat = 30 - dat;
-            }
-            else{
-                dat = 28 - dat;
-            }
+    function myfirstfunction(){
+        mon -= 1;
+        if(m2 == 1 || m2 == 3 || m2 == 5 || m2 == 7 || m2 == 8 || m2 == 10 || m2 == 12){
+            dat = 31 - dat;
+        }
+        else if(m2 == 4 || m2 == 6 || m2 == 9 || m2 == 11){
+            dat = 30 - dat;
+        }
+        else{
+            dat = 28 - dat;
         }
     }
+
+    if(m1 >= m2){
+        if(d2 > d1){
+            myfirstfunction();
+        }
+    }
+
     if(m2 > m1){
         yr -= 1;
         if(d2 > d1){
-            mon += 1;
-            if(m2 == 1 || m2 == 3 || m2 == 5 || m2 == 7 || m2 == 8 || m2 == 10 || m2 == 12){
-                dat = 31 - dat;
-            }
-            else if(m2 == 4 || m2 == 6 || m2 == 9 || m2 == 11){
-                dat = 30 - dat;
-            }
-            else{
-                dat = 28 - dat;
-            }
+            mon += 2;
+            myfirstfunction();
         }
         mon = 12 - mon;
     }
@@ -112,5 +107,10 @@ document.getElementById("dicebtn").onclick = function(){
     }
 }
 
-
 //----------------end of dice rolls-------------------------
+/*
+let xyz = "39804";
+console.log(xyz.slice(-2));
+*/
+//----------------damn it works!----------------------------
+
