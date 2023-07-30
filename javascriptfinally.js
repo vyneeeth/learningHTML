@@ -1,5 +1,4 @@
 console.log("Hellow World lol?");
-console.log('i hate javascript (for now)');
 
 //accept user input and display the same:
 /*let age;
@@ -21,7 +20,7 @@ document.getElementById("first").onclick = function(){
     y2 = Number(date2.slice(0, 4));
     m2 = Number(date2.slice(5, 7));
     d2 = Number(date2.slice(8,));
-    console.log(y2, m2, d2);
+    //console.log(y2, m2, d2);
 
     yr = Math.abs(y1 - y2);
     mon = Math.abs(m1 - m2);
@@ -110,7 +109,28 @@ document.getElementById("dicebtn").onclick = function(){
 //----------------end of dice rolls-------------------------
 /*
 let xyz = "39804";
-console.log(xyz.slice(-2));
+console.log(xyz.slice(-3, -1));
 */
 //----------------damn it works!----------------------------
 
+function myfunc(){
+
+const operator = prompt("Enter operator (either +, -, /, * ): ");
+
+const num1 = parseFloat(prompt("Number 1: "));
+const num2 = parseFloat(prompt("Number 2: "));
+
+let result;
+if (operator == '+')
+    result = num1 + num2;
+else if (operator == '-')
+    result = num1 - num2;
+else if (operator == '*')
+    result = num1 * num2;
+else
+    result = num1 / num2;
+
+console.log(`${num1} ${operator} ${num2} = ${result}`);
+alert(`${result}`)
+
+}
